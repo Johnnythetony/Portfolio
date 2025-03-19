@@ -23,6 +23,7 @@ section > h2
 {
     position: sticky;
     top: 0;
+    scroll-margin-top: 50px;
 }
 
 /*Definimos las reglas del menu de navegacion, le aplicamos colores, 
@@ -74,6 +75,7 @@ header div
 header div img
 {
     margin:auto 30px;
+    box-shadow: 5px 5px 20px lightgray;
 }
 
 /*Creamos un grid area para organizar la seccion "Sobre mi"*/
@@ -88,6 +90,7 @@ header div img
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 5% 1fr 1fr 1fr;
     gap: 20px;
+    scroll-margin-top: 50px;
 }
 
 /*Damos estilo a los distintos apartados de la seccion*/
@@ -98,6 +101,7 @@ header div img
     padding: 20px;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 5px 20px rgb(194, 194, 194);
 }
 
 /*Y les asignamos sus respectivas posiciones en el grid*/
@@ -142,19 +146,86 @@ header div img
 #proyectos
 {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    scroll-margin-top: 50px;
 }
 
 #proyectos div
 {
     border-radius: 15px;
-    background-color: rgb(210, 210, 210);
     padding: 20px;
     margin: 2% auto;
+    box-shadow: 5px 5px 20px lightgray;
+}
+
+/*Estilo para seccion "Idiomas"*/
+#idiomas
+{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    scroll-margin-top: 50px;
+}
+
+table
+{
+    border-radius: 15px;
+    text-align: center;
+    width: 20%;
+}
+
+table, th, td
+{
+    border-collapse: collapse;
+    border: solid 1px black;
+    padding: 5px 5px;
+}
+
+th
+{
+    background-color: black;
+    color: white;
+}
+
+td + td
+{
+    font-style: italic;
+    color: lightslategray;
 }
 
 /*Estilo para seccion "Experiencia"*/
+#experiencia
+{
+    scroll-margin-top: 50px;
+}
 
-/*Estilo para el footer*/
+#experiencia article
+{
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 5px 5px 20px lightgray;
+}
 
 /*Estilo para el formulario de contacto*/
+#contacto
+{
+    scroll-margin-top: 50px;
+}
+
+
+/*Estilo para el footer*/
+footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer > p
+{
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
