@@ -4,14 +4,35 @@
     font-family: Verdana;
 }
 
-/*Definimos las reglas del menu de navegacion, lo hacemos sticky para que se mantenga siempre en pantalla aunque hagamos scroll, le aplicamos colores, 
-direction para tener la lista en linea, wrap para que se ajuste al modificar la ventana o pantalla, justify content para centrar los elementos de la lista y le quitamos los puntos a cada li*/
+/*Separacion entre secciones y relleno para separar contenido de los bordes*/
+section
+{
+    margin: 2% auto;
+    padding: 20px;
+}
+
+/*Estilo para todos los titulos de seccion*/
+section > h2
+{
+    text-align: center;
+    margin: 2% auto;
+}
+
+/*Hacemos sticky el menu para que siempre este en pantalla*/
+#inicio
+{
+    position: sticky;
+    top: 0;
+}
+
+/*Definimos las reglas del menu de navegacion, le aplicamos colores, 
+direction para tener la lista en linea, wrap para que se ajuste al modificar la ventana o pantalla, 
+justify content para centrar los elementos de la lista y le quitamos los puntos a cada li*/
 .menuportfolio
 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    position: sticky;
     list-style-type: none;
     background-color: black;
 }
@@ -38,7 +59,7 @@ y un color distinto de fondo a los botones al poner encima el cursor*/
 /*Alternamos color de fondo para las distintas secciones del portafolio*/
 main section:nth-child(odd)
 {
-    background-color: lightcyan;
+    background-color: rgb(227, 226, 226);
 }
 
 /*Colocamos con el flex row los elementos principales del header y los centramos*/
@@ -65,11 +86,23 @@ header div img
     "intereses intereses intereses intereses"
     "curr_l bland_s bland_s tech";
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 5% 1fr 1fr 1fr;
     place-items: center;
     gap: 20px;
 }
 
+/*Damos estilo a los distintos apartados de la seccion*/
+#sobre_mi article
+{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Y les asignamos sus respectivas posiciones en el grid*/
 #sobre_mi > h2
 {
     grid-area: h2;
@@ -105,3 +138,24 @@ header div img
 {
     grid-area: tech;
 }
+
+/*Usamos flex para organizar la sección de proyectos*/
+#proyectos
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#proyectos div
+{
+    border-radius: 15px;
+    background-color: rgb(210, 210, 210);
+    padding: 20px;
+    margin: 2% auto;
+}
+
+/*Estilo para seccion "Experiencia"*/
+
+/*Estilo para el footer*/
+
+/*Estilo para el formulario de contacto*/
