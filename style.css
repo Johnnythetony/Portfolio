@@ -1,4 +1,4 @@
-/*Definimos unas reglas generales que debe cumplir toda la página de base, luego cada caso recibira su modificacion oportuna*/
+/*Definimos unas reglas generales que debe cumplir toda la página e imagenes de base, luego cada caso recibira su modificacion oportuna*/
 *
 {
     font-family: Verdana;
@@ -69,7 +69,8 @@ main section:nth-child(odd)
     background-color: rgb(227, 226, 226);
 }
 
-/*Colocamos con el flex row los elementos principales del header y los centramos*/
+/*Colocamos con el flex los elementos principales del header y los centramos, y 
+ajustamos el margen de scroll para cuando usamos el menu de navegacion (lo aplicaremos al resto de secciones)*/
 header div
 {
     display: flex;
@@ -78,7 +79,7 @@ header div
     scroll-margin-top: 70px;
 }
 
-/*Creamos un pequeño margen entre imagen y texto*/
+/*Creamos un pequeño margen entre imagen y texto, y estilizamos la imagen*/
 header div img
 {
     margin:auto 30px;
@@ -160,6 +161,7 @@ header div img
     scroll-margin-top: 50px;
 }
 
+/*Estilizamos los distintos apartados de la seccion*/
 #proyectos div
 {
     border-radius: 15px;
@@ -169,7 +171,7 @@ header div img
     width: 90%;
 }
 
-/*Estilo para seccion "Idiomas"*/
+/*usamos flex para colocar los elementos de la sección "idiomas"*/
 #idiomas
 {
     display: flex;
@@ -178,9 +180,10 @@ header div img
     scroll-margin-top: 50px;
 }
 
+/*Aplicamos estilos a la tabla para que se vea un solo borde, 
+coloreamos las cabeceras de las columnas y centramos el texto de cada celda*/
 table
 {
-    border-radius: 15px;
     text-align: center;
     width: 20%;
 }
@@ -204,12 +207,13 @@ td + td
     color: lightslategray;
 }
 
-/*Estilo para seccion "Experiencia"*/
+/*Aplicamos el ajuste de scroll de seccion correspondiente*/
 #experiencia
 {
     scroll-margin-top: 50px;
 }
 
+/*Aplicamos estilo a cada apartado de la seccion "experiencia"*/
 #experiencia article
 {
     border-radius: 15px;
@@ -217,7 +221,7 @@ td + td
     box-shadow: 5px 5px 20px lightgray;
 }
 
-/*Estilo para el formulario de contacto*/
+/*Estilo para la seccion de contacto, centramos usando flex*/
 #contacto
 {
     display: flex;
@@ -226,6 +230,7 @@ td + td
     scroll-margin-top: 50px;
 }
 
+/*Estilamos el formulario, ordenando los elementos con flex*/
 #contactform
 {
     display: flex;
@@ -241,7 +246,7 @@ input, textarea
     margin-bottom: 20px;
 }
 
-/*Estilo para el footer*/
+/*Colocamos el footer con flex*/
 footer
 {
     display: flex;
@@ -249,6 +254,7 @@ footer
     align-items: center;
 }
 
+/*Estilamos el pie de pagina acorde al menu de navegacion que ocupa el tope de la pantalla en todo momento*/
 footer > p
 {
     background-color: black;
