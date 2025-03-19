@@ -1,3 +1,9 @@
+/*Definimos unas reglas básicas que debe cumplir toda la página*/
+*
+{
+    font-family: Verdana;
+}
+
 /*Definimos las reglas del menu de navegacion, lo hacemos sticky para que se mantenga siempre en pantalla aunque hagamos scroll, le aplicamos colores, 
 direction para tener la lista en linea, wrap para que se ajuste al modificar la ventana o pantalla, justify content para centrar los elementos de la lista y le quitamos los puntos a cada li*/
 .menuportfolio
@@ -41,4 +47,61 @@ header div
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+/*Creamos un pequeño margen entre imagen y texto*/
+header div img
+{
+    margin:auto 20px;
+}
+
+/*Creamos un grid area para organizar la seccion "Sobre mi"*/
+#sobre_mi
+{
+    display: grid;
+    grid-template-areas: 
+    "h2 h2 h2 h2"
+    "skills skills formacion formacion"
+    "intereses intereses intereses intereses"
+    "curr_l bland_s bland_s tech";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    place-items: center;
+    gap: 20px;
+}
+
+#sobre_mi > h2
+{
+    grid-area: h2;
+    text-align: center;
+}
+
+#sobre_mi .skills
+{
+    grid-area: skills;
+}
+
+#sobre_mi .formacion
+{
+    grid-area: formacion;
+}
+
+#sobre_mi .intereses
+{
+    grid-area: intereses;
+}
+
+#sobre_mi .current_learning
+{
+    grid-area: curr_l;
+}
+
+#sobre_mi .bland_skills
+{
+    grid-area: bland_s;
+}
+
+#sobre_mi .tech
+{
+    grid-area: tech;
 }
