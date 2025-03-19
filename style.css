@@ -1,7 +1,14 @@
-/*Definimos unas reglas básicas que debe cumplir toda la página*/
+/*Definimos unas reglas generales que debe cumplir toda la página de base, luego cada caso recibira su modificacion oportuna*/
 *
 {
     font-family: Verdana;
+}
+
+img
+{
+    border-radius: 15px;
+    max-width: 30%;
+    height: auto;
 }
 
 /*Separacion entre secciones y relleno para separar contenido de los bordes*/
@@ -19,11 +26,10 @@ section > h2
 }
 
 /*Hacemos sticky el menu para que siempre este en pantalla*/
-#inicio
+#navmenu
 {
     position: sticky;
     top: 0;
-    scroll-margin-top: 50px;
 }
 
 /*Definimos las reglas del menu de navegacion, le aplicamos colores, 
@@ -69,6 +75,7 @@ header div
     display: flex;
     flex-direction: row;
     align-items: center;
+    scroll-margin-top: 70px;
 }
 
 /*Creamos un pequeño margen entre imagen y texto*/
@@ -76,6 +83,9 @@ header div img
 {
     margin:auto 30px;
     box-shadow: 5px 5px 20px lightgray;
+    border-radius: 100%;
+    max-width: 10%;
+    border: solid 3px black;
 }
 
 /*Creamos un grid area para organizar la seccion "Sobre mi"*/
@@ -156,6 +166,7 @@ header div img
     padding: 20px;
     margin: 2% auto;
     box-shadow: 5px 5px 20px lightgray;
+    width: 90%;
 }
 
 /*Estilo para seccion "Idiomas"*/
@@ -209,9 +220,26 @@ td + td
 /*Estilo para el formulario de contacto*/
 #contacto
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     scroll-margin-top: 50px;
 }
 
+#contactform
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 50%;
+}
+
+input, textarea
+{
+    margin-bottom: 20px;
+}
 
 /*Estilo para el footer*/
 footer

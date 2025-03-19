@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav id="inicio">
+    <nav id="navmenu">
         <ul class="menuportfolio">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobre_mi">Sobre mi</a></li>
@@ -18,8 +18,8 @@
         </ul>
     </nav>
     <header>
-        <div>
-            <img src="img/Foto_portfolio.jpg" alt="Foto portfolio">
+        <div id="inicio">
+            <img src="img/pfp.jpg" alt="Foto portfolio">
             <article>
                 <h2>Juan Antonio Macias Prieto</h2>
                 <p>Desarrollador backend</p>
@@ -87,11 +87,13 @@
             <h2>Proyectos</h2>
             <div>
                 <img src="img/DodgeChallenge.jpeg" alt="Captura_proyecto">
-                <p>Dodge challenge (Unity 3D/C#)<br><br>Mi primer proyecto en Unity 3D, un pequeño juego hecho usando scripts basados en el lenguaje C# en 2017</p>
+                <h3>Dodge challenge (Unity 3D/C#)</h3>
+                <p>Mi primer proyecto en Unity 3D, un pequeño juego hecho usando scripts basados en el lenguaje C# en 2017</p>
             </div>
             <div>
-                <img src="img/ajedrez.jpg" alt="Imagen_de_ejemplo">
-                <p>Throne Overlord WIP (CSS/JavaScript/SQL)<br><br>Proyecto actual, un juego de navegador basado en el ajedrez</p>
+                <img src="img/ejemploajedrez.jpg" alt="Imagen_de_ejemplo">
+                <h3>Throne Overlord WIP (CSS/JavaScript/SQL)</h3>
+                <p>Proyecto actual, un juego de navegador basado en el ajedrez</p>
             </div>
         </section>
         <section id="idiomas">
@@ -127,7 +129,14 @@
         </section>
         <section id="contacto">
             <h2>Contacto</h2>
-            <form action="#">
+            <form action="#" id="contactform">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Escribe tu nombre">
+                <label for="mail">Correo electronico</label>
+                <input type="mail" name="mail" id="mail" placeholder="Escribe tu correo electronico">
+                <label for="msg">Mensaje</label>
+                <textarea name="msg" id="msg" placeholder="Escribe aqui tu mensaje"></textarea>
+                <input type="submit" onclick="alert('Se ha enviado el mensaje')" value="Enviar mensaje">
             </form>
         </section>
     </main>
