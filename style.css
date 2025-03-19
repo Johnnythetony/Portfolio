@@ -73,7 +73,7 @@ header div
 /*Creamos un pequeño margen entre imagen y texto*/
 header div img
 {
-    margin:auto 20px;
+    margin:auto 30px;
 }
 
 /*Creamos un grid area para organizar la seccion "Sobre mi"*/
@@ -87,7 +87,6 @@ header div img
     "curr_l bland_s bland_s tech";
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 5% 1fr 1fr 1fr;
-    place-items: center;
     gap: 20px;
 }
 
@@ -97,7 +96,6 @@ header div img
     background-color: white;
     border-radius: 15px;
     padding: 20px;
-    width: 80%;
     align-items: center;
     justify-content: center;
 }
@@ -107,6 +105,7 @@ header div img
 {
     grid-area: h2;
     text-align: center;
+    align-self: center;
 }
 
 #sobre_mi .skills
